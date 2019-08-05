@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/01 12:15:53 by jfelty            #+#    #+#             */
+/*   Updated: 2019/08/04 12:22:04 by jfelty           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strnew(size_t len)
+{
+	char *strspace;
+
+	if (!(strspace = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (len > 0)
+	{
+		strspace[len] = '\0';
+		len--;
+	}
+	return (strspace);
+}

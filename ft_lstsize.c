@@ -6,13 +6,13 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 16:44:33 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 16:45:36 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/04 17:35:39 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_list_size(t_list *begin_list)
+int	ft_lstsize(t_list *begin_list)
 {
 	int i;
 

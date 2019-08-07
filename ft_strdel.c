@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 12:32:02 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:21:25 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/04 17:48:32 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	if (as)
-		ft_memdel((void *)*as);
+	if (as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

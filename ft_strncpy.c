@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 13:03:26 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/01 14:58:59 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/05 11:13:56 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,19 @@
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	int i;
+	size_t i;
 
-	i = -1;
-	while (++i != (int)n)
+	i = 0;
+	while (i < n && src[i])
+	{
 		dest[i] = src[i];
-	dest[i] = '\0';
+		i++;
+	}
+	if (ft_strlen(src) < n)
+		while (i < n)
+		{
+			dest[i] = '\0';
+			i++;
+		}
 	return (dest);
 }

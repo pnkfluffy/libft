@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 13:28:33 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:21:52 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 11:30:16 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 			newstr[i] = f(i, s[i]);
 			i++;
 		}
+		newstr[i] = '\0';
 		return (newstr);
 	}
 	return (NULL);

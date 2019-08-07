@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 16:30:21 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:18:31 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 11:49:42 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_itoa(int n)
 	i = ft_numlength(n) - 1;
 	if (!(str = (char *)malloc(sizeof(char) * ft_numlength(n) + 1)))
 		return (NULL);
+	str[i + 1] = '\0';
 	if (n < 0)
 	{
 		str[0] = '-';

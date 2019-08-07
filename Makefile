@@ -6,12 +6,14 @@
 #    By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/23 15:25:27 by jfelty            #+#    #+#              #
-#    Updated: 2019/08/04 16:52:37 by jfelty           ###   ########.fr        #
+#    Updated: 2019/08/05 15:58:48 by jfelty           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 #name of resultant compiled library
+
+CC = @gcc
 
 CFLAGS = -Wall -Wextra -Werror -I. -c
 #flags to compile with header in local directory
@@ -22,8 +24,8 @@ SRC =	ft_strlen.c \
 		ft_strncpy.c \
 		ft_strcat.c \
 		ft_strncat.c \
-		ft_strchr \
-		ft_strrchr \
+		ft_strchr.c \
+		ft_strrchr.c \
 		ft_strstr.c \
 		ft_strnstr.c \
 		ft_strcmp.c \
@@ -87,16 +89,19 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-# ar updates and rc replaces library file if any changes have been made
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"
+#ar updates and rc replaces library file if any changes have been made
+#@ suppresses command line outputs
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 #cleans object files in directory
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ✧ﾟ･: *ヽ(◕ヮ◕ヽ)"
 #empties library as well
 
 re: fclean all

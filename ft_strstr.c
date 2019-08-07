@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 02:52:06 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 16:33:39 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/05 11:15:43 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strstr(const char *str, const char *substr)
 		while (substr[i] == str[i + j])
 		{
 			i++;
-			if (i == ft_strlen(substr))
+			if (i == (int)ft_strlen(substr))
 				return ((char *)str + j);
 		}
 		j++;

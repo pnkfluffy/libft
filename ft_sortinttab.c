@@ -6,13 +6,13 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 16:51:46 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 16:52:04 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/04 17:35:10 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	sort_int_tab(int *tab, unsigned int size)
+void	ft_sortinttab(int *tab, unsigned int size)
 {
 	int i;
 	int b;

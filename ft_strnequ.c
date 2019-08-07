@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 13:41:57 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:22:03 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 13:50:13 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (s1 && s2)
+	if (s1 && s2 && n)
 		return (ft_strncmp(s1, s2, n) == 0);
+	if (!(n))
+		return (1);
 	return (0);
 }

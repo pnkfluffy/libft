@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 12:15:53 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:22:04 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 11:27:59 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,5 @@ char	*ft_strnew(size_t len)
 
 	if (!(strspace = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	while (len > 0)
-	{
-		strspace[len] = '\0';
-		len--;
-	}
-	return (strspace);
+	return (ft_memset(strspace, (int)'\0', len + 1));
 }

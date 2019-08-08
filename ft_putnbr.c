@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 23:53:21 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/04 12:20:23 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 18:50:37 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_putnbr(int n)
 	if (n < 0)
 	{
 		if (n == -2147483648)
+		{
 			ft_putstr("-2147483648");
+			return ;
+		}
 		else
 		{
 			n *= -1;
@@ -25,6 +28,10 @@ void	ft_putnbr(int n)
 		}
 	}
 	if (n > 9)
+	{
 		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n % 10 + '0');
 }

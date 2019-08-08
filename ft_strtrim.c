@@ -6,7 +6,7 @@
 /*   By: jfelty <jfelty@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 16:58:17 by jfelty            #+#    #+#             */
-/*   Updated: 2019/08/07 14:12:36 by jfelty           ###   ########.fr       */
+/*   Updated: 2019/08/07 18:41:42 by jfelty           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,21 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*endstr;
-	int		len;
-	int		i;
-	int		b;
+	int		x;
+	int		y;
+	char	*newstr;
 
-	b = 0;
-	i = 0;
-	len = ft_strlen(s) - 1;
-	while (ft_isspace(s[len]) && len >= 0)
-		len--;
-	while (ft_isspace(s[i]) && s[i])
-		i++;
-	if (!s[i])
-		return ("");
-	if (!(endstr = (char *)malloc(sizeof(char) * (len - i + 2))))
+	if (!s)
 		return (NULL);
-	while (i <= len)
-		endstr[b++] = s[i++];
-	endstr[b] = '\0';
-	return (endstr);
+	x = 0;
+	y = 0;
+	while (s[x] && ft_isspace(s[x]))
+		x++;
+	y = ft_strlen(&s[x]) - 1;
+	while (s[x] && ft_isspace(s[y + x]))
+		y--;
+	if (!(newstr = ft_strnew(y + 1)))
+		return (NULL);
+	ft_strncpy(newstr, (s + x), (y + 1));
+	return (newstr);
 }
